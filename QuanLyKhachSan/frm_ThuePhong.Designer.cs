@@ -41,7 +41,7 @@
             this.GiaTri = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbo_MaKhachHang = new System.Windows.Forms.ComboBox();
-            this.dpt_NgayThue = new System.Windows.Forms.DateTimePicker();
+            this.dtp_NgayThue = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btn_ThuePhong = new System.Windows.Forms.Button();
@@ -181,7 +181,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.cbo_MaKhachHang);
-            this.groupBox1.Controls.Add(this.dpt_NgayThue);
+            this.groupBox1.Controls.Add(this.dtp_NgayThue);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(20, 24);
@@ -201,15 +201,15 @@
             this.cbo_MaKhachHang.TabIndex = 32;
             this.cbo_MaKhachHang.SelectedIndexChanged += new System.EventHandler(this.cbo_MaKhachHang_SelectedIndexChanged);
             // 
-            // dpt_NgayThue
+            // dtp_NgayThue
             // 
-            this.dpt_NgayThue.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dpt_NgayThue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dpt_NgayThue.Location = new System.Drawing.Point(145, 112);
-            this.dpt_NgayThue.Name = "dpt_NgayThue";
-            this.dpt_NgayThue.Size = new System.Drawing.Size(205, 23);
-            this.dpt_NgayThue.TabIndex = 31;
-            this.dpt_NgayThue.VisibleChanged += new System.EventHandler(this.dpt_NgayThue_VisibleChanged);
+            this.dtp_NgayThue.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_NgayThue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_NgayThue.Location = new System.Drawing.Point(145, 112);
+            this.dtp_NgayThue.Name = "dtp_NgayThue";
+            this.dtp_NgayThue.Size = new System.Drawing.Size(205, 23);
+            this.dtp_NgayThue.TabIndex = 31;
+            this.dtp_NgayThue.VisibleChanged += new System.EventHandler(this.dpt_NgayThue_VisibleChanged);
             // 
             // label1
             // 
@@ -339,7 +339,7 @@
         private System.Windows.Forms.ColumnHeader GiaTri;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox cbo_MaKhachHang;
-        private System.Windows.Forms.DateTimePicker dpt_NgayThue;
+        private System.Windows.Forms.DateTimePicker dtp_NgayThue;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;

@@ -94,7 +94,7 @@
             this.tabControl_DichVu.Location = new System.Drawing.Point(3, 2);
             this.tabControl_DichVu.Name = "tabControl_DichVu";
             this.tabControl_DichVu.SelectedIndex = 0;
-            this.tabControl_DichVu.Size = new System.Drawing.Size(1064, 576);
+            this.tabControl_DichVu.Size = new System.Drawing.Size(1202, 576);
             this.tabControl_DichVu.TabIndex = 0;
             // 
             // tabPage_TimDV
@@ -105,7 +105,7 @@
             this.tabPage_TimDV.Location = new System.Drawing.Point(4, 22);
             this.tabPage_TimDV.Name = "tabPage_TimDV";
             this.tabPage_TimDV.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_TimDV.Size = new System.Drawing.Size(1056, 550);
+            this.tabPage_TimDV.Size = new System.Drawing.Size(1194, 550);
             this.tabPage_TimDV.TabIndex = 0;
             this.tabPage_TimDV.Text = "Tìm dịch vụ";
             this.tabPage_TimDV.UseVisualStyleBackColor = true;
@@ -119,7 +119,7 @@
             this.dgv_DanhSachDichVu1.BackgroundColor = System.Drawing.Color.White;
             this.dgv_DanhSachDichVu1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_DanhSachDichVu1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_DanhSachDichVu1.Location = new System.Drawing.Point(6, 222);
+            this.dgv_DanhSachDichVu1.Location = new System.Drawing.Point(75, 222);
             this.dgv_DanhSachDichVu1.Name = "dgv_DanhSachDichVu1";
             this.dgv_DanhSachDichVu1.ReadOnly = true;
             this.dgv_DanhSachDichVu1.RowHeadersWidth = 51;
@@ -598,7 +598,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 579);
+            this.ClientSize = new System.Drawing.Size(1202, 579);
             this.Controls.Add(this.tabControl_DichVu);
             this.Name = "frm_DichVu";
             this.Text = "Dịch vụ";

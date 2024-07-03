@@ -213,5 +213,10 @@ namespace QuanLyKhachSan
             frm_Main frm_TrangChu = new frm_Main(tk);
             frm_Main.ViDu.OpenChildForm(dichVuForm);
         }
+
+        private void btn_DangKyDichVu_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

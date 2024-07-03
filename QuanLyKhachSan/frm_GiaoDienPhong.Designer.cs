@@ -169,7 +169,7 @@
             this.panel1.Controls.Add(this.pnl_101);
             this.panel1.Location = new System.Drawing.Point(0, 55);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1132, 80);
+            this.panel1.Size = new System.Drawing.Size(1157, 80);
             this.panel1.TabIndex = 7;
             // 
             // pnl_105
@@ -389,7 +389,7 @@
             this.panel2.Controls.Add(this.panel7);
             this.panel2.Location = new System.Drawing.Point(0, 179);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1132, 80);
+            this.panel2.Size = new System.Drawing.Size(1157, 80);
             this.panel2.TabIndex = 8;
             // 
             // panel3
@@ -608,7 +608,7 @@
             this.panel8.Controls.Add(this.panel13);
             this.panel8.Location = new System.Drawing.Point(0, 302);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1132, 80);
+            this.panel8.Size = new System.Drawing.Size(1157, 80);
             this.panel8.TabIndex = 9;
             // 
             // panel9
@@ -827,7 +827,7 @@
             this.panel14.Controls.Add(this.panel19);
             this.panel14.Location = new System.Drawing.Point(0, 426);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(1132, 80);
+            this.panel14.Size = new System.Drawing.Size(1157, 80);
             this.panel14.TabIndex = 10;
             // 
             // panel15
@@ -1040,7 +1040,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1130, 529);
+            this.ClientSize = new System.Drawing.Size(1247, 529);
             this.Controls.Add(this.panel14);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel2);

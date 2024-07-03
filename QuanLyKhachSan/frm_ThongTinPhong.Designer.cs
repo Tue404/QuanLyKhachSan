@@ -202,6 +202,7 @@
             this.btn_DangKyDichVu.TabIndex = 56;
             this.btn_DangKyDichVu.Text = "Đăng ký dịch vụ";
             this.btn_DangKyDichVu.UseVisualStyleBackColor = true;
+            this.btn_DangKyDichVu.Click += new System.EventHandler(this.btn_DangKyDichVu_Click);
             // 
             // btn_Thoat
             // 

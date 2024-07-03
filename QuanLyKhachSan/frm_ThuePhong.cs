@@ -68,7 +68,7 @@ namespace QuanLyKhachSan
         private void frm_ThuePhong_Load(object sender, EventArgs e)
         {
             var tt = bll.laytt();
-            foreach (var makhachhang in tt) 
+            foreach (var makhachhang in tt)
             {
                 cbo_MaKhachHang.Items.Add(makhachhang.MaKhachHang);
             }
@@ -77,8 +77,9 @@ namespace QuanLyKhachSan
 
             dgv_DanhSachKhachDaThue.Columns.Clear();
 
-            var dsKhachDaThue = bll.LayDanhSachKhachDaThue();
-            dgv_DanhSachKhachDaThue.DataSource = dsKhachDaThue;
+            // Điền dữ liệu vào DataGridView
+            var danhSachKhachDaThue = bll.LayDanhSachKhachDaThue();
+            dgv_DanhSachKhachDaThue.DataSource = danhSachKhachDaThue;
             TenDGV();
         }
 
@@ -108,11 +109,11 @@ namespace QuanLyKhachSan
             var item = lstv_ChiTiet.FindItemWithText("Ngày thuê");
             if (item != null)
             {
-                item.Text = "Ngày thuê: " + dpt_NgayThue.Value.ToString("dd/MM/yyyy");
+                item.Text = "Ngày thuê: " + dtp_NgayThue.Value.ToString("dd/MM/yyyy");
             }
             else
             {
-                lstv_ChiTiet.Items.Add(new ListViewItem("Ngày thuê: " + dpt_NgayThue.Value.ToString("dd/MM/yyyy")));
+                lstv_ChiTiet.Items.Add(new ListViewItem("Ngày thuê: " + dtp_NgayThue.Value.ToString("dd/MM/yyyy")));
             }
         }
 
@@ -207,7 +208,7 @@ namespace QuanLyKhachSan
             string maPhong = selectedRow.Cells["MaPhong"].Value.ToString();
 
             // Kiểm tra ngày thuê không lớn hơn ngày hiện tại
-            DateTime ngayThue = dpt_NgayThue.Value.Date;
+            DateTime ngayThue = dtp_NgayThue.Value.Date;
             if (ngayThue > DateTime.Now.Date)
             {
                 MessageBox.Show("Ngày thuê không được lớn hơn ngày hiện tại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);

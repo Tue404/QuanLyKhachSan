@@ -51,7 +51,7 @@ namespace QuanLyKhachSan
                 {
                     lbl_KiemTraTK.Text = "";
                     lbl_KiemTraMK.Text = "";
-                    throw new Exception("*Lỗi. Không có nhân sự nào có mã căn cước công dân như này");
+                    throw new Exception("*Lỗi. Không có nhân viên nào có mã căn cước công dân như này");
                 }
 
                 else if (tk == "")

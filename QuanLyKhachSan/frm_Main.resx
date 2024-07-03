@@ -138,7 +138,7 @@
   <data name="btn_TaiKhoan.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAAAflJREFUWEft1k1IVFEYxvExDSI/SApBQcVtO0My+lhJCLoI3ejKlUZkSK5auFOx
+        DAAACwwBP0AiyAAAAflJREFUWEft1k1IVFEYxvExDSI/SApBQcVtO0My+lhJCLoI3ejKlUZkSK5auFOx
         NKi0iBARDQRLIVqJG10pEgUKqSGZmoRtEtSIklL/zzmzcRzvleGcVj7wY973Mswc7j0fN3KcBHMZzzGO
         BXzAE+TAa9IwjL8YRSsa0I4ZfEUtUuElr/AZ5023P6fQiVVM4xyc5iJ2op9BycQnPDadwzRDt/koqcc3
         W7rLSwzYMjTXsAvNGWd5jR5bhuYqNIAM0zmKlt0bW4amCj9t6S6NmLVlaB5Be4TTlOMf0k0XHC3Dh7Z0
@@ -152,7 +152,7 @@
   <data name="btn_NhanVien.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAAAfVJREFUWEft1r1LHFEUxuHRGARB8OMPUEGtAlooEjAKVmlEDFgZkGAhERUUtAj5
+        DAAACwwBP0AiyAAAAfVJREFUWEft1r1LHFEUxuHRGARB8OMPUEGtAlooEjAKVmlEDFgZkGAhERUUtAj5
         EESxMxAC2tppISSBQDApRIQ00UqLoIWNoCAhNgp+JL932YVh91zvjO4Kwr7wIMzOOTO7zrl3gnzuayrR
         j0X8wHvcWV7iL46whDlcQTfRhJxmHGcYRbEOJPMGG9CNjOhAttKICejb9eIy+deVAZzjBXRTH/AEsVOB
         T/gXom+3BV82Ea7bQx+KECmFWEO4Sco0fHkNq3YZkdIFq4H0wJdnsGqlDd7o/20VSzd80TlWrUzBm3lY
@@ -267,9 +267,6 @@
         ychhwhJOWGIVJiVyjNrDcZjsrOG8v3Uc55+u+wIOhzP7g6DREAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

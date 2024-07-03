@@ -36,12 +36,12 @@
             this.lbl_Matkhaucu = new System.Windows.Forms.Label();
             this.txt_MatKhauCu = new System.Windows.Forms.TextBox();
             this.pnl_DoiMK = new System.Windows.Forms.Panel();
+            this.LBL_NLMKM = new System.Windows.Forms.Label();
+            this.lbl_MKM = new System.Windows.Forms.Label();
+            this.lbl_MKC = new System.Windows.Forms.Label();
             this.btn_DMK = new System.Windows.Forms.Button();
             this.txt_NhapLaiMK = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.lbl_MKC = new System.Windows.Forms.Label();
-            this.lbl_MKM = new System.Windows.Forms.Label();
-            this.LBL_NLMKM = new System.Windows.Forms.Label();
             this.pnl_DoiMK.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,6 +94,7 @@
             this.txt_MatKhauMoi.Name = "txt_MatKhauMoi";
             this.txt_MatKhauMoi.Size = new System.Drawing.Size(172, 26);
             this.txt_MatKhauMoi.TabIndex = 1;
+            this.txt_MatKhauMoi.UseSystemPasswordChar = true;
             this.txt_MatKhauMoi.TextChanged += new System.EventHandler(this.txt_MatKhauMoi_TextChanged);
             // 
             // lbl_Matkhaucu
@@ -114,6 +115,7 @@
             this.txt_MatKhauCu.Name = "txt_MatKhauCu";
             this.txt_MatKhauCu.Size = new System.Drawing.Size(172, 26);
             this.txt_MatKhauCu.TabIndex = 1;
+            this.txt_MatKhauCu.UseSystemPasswordChar = true;
             this.txt_MatKhauCu.TextChanged += new System.EventHandler(this.txt_MatKhauCu_TextChanged);
             // 
             // pnl_DoiMK
@@ -135,6 +137,42 @@
             this.pnl_DoiMK.Size = new System.Drawing.Size(361, 354);
             this.pnl_DoiMK.TabIndex = 1;
             this.pnl_DoiMK.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_DoiMK_Paint);
+            // 
+            // LBL_NLMKM
+            // 
+            this.LBL_NLMKM.AutoSize = true;
+            this.LBL_NLMKM.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_NLMKM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.LBL_NLMKM.Location = new System.Drawing.Point(166, 217);
+            this.LBL_NLMKM.Name = "LBL_NLMKM";
+            this.LBL_NLMKM.Size = new System.Drawing.Size(13, 17);
+            this.LBL_NLMKM.TabIndex = 46;
+            this.LBL_NLMKM.Text = "*";
+            this.LBL_NLMKM.Visible = false;
+            // 
+            // lbl_MKM
+            // 
+            this.lbl_MKM.AutoSize = true;
+            this.lbl_MKM.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_MKM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbl_MKM.Location = new System.Drawing.Point(166, 163);
+            this.lbl_MKM.Name = "lbl_MKM";
+            this.lbl_MKM.Size = new System.Drawing.Size(13, 17);
+            this.lbl_MKM.TabIndex = 46;
+            this.lbl_MKM.Text = "*";
+            this.lbl_MKM.Visible = false;
+            // 
+            // lbl_MKC
+            // 
+            this.lbl_MKC.AutoSize = true;
+            this.lbl_MKC.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_MKC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbl_MKC.Location = new System.Drawing.Point(166, 114);
+            this.lbl_MKC.Name = "lbl_MKC";
+            this.lbl_MKC.Size = new System.Drawing.Size(13, 17);
+            this.lbl_MKC.TabIndex = 46;
+            this.lbl_MKC.Text = "*";
+            this.lbl_MKC.Visible = false;
             // 
             // btn_DMK
             // 
@@ -160,6 +198,7 @@
             this.txt_NhapLaiMK.Name = "txt_NhapLaiMK";
             this.txt_NhapLaiMK.Size = new System.Drawing.Size(172, 26);
             this.txt_NhapLaiMK.TabIndex = 1;
+            this.txt_NhapLaiMK.UseSystemPasswordChar = true;
             this.txt_NhapLaiMK.TextChanged += new System.EventHandler(this.txt_MatKhauMoi_TextChanged);
             // 
             // label1
@@ -172,42 +211,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nhập lại mật khẩu";
             this.label1.Click += new System.EventHandler(this.lbl_MK_Click);
-            // 
-            // lbl_MKC
-            // 
-            this.lbl_MKC.AutoSize = true;
-            this.lbl_MKC.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_MKC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lbl_MKC.Location = new System.Drawing.Point(166, 114);
-            this.lbl_MKC.Name = "lbl_MKC";
-            this.lbl_MKC.Size = new System.Drawing.Size(13, 17);
-            this.lbl_MKC.TabIndex = 46;
-            this.lbl_MKC.Text = "*";
-            this.lbl_MKC.Visible = false;
-            // 
-            // lbl_MKM
-            // 
-            this.lbl_MKM.AutoSize = true;
-            this.lbl_MKM.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_MKM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lbl_MKM.Location = new System.Drawing.Point(166, 163);
-            this.lbl_MKM.Name = "lbl_MKM";
-            this.lbl_MKM.Size = new System.Drawing.Size(13, 17);
-            this.lbl_MKM.TabIndex = 46;
-            this.lbl_MKM.Text = "*";
-            this.lbl_MKM.Visible = false;
-            // 
-            // LBL_NLMKM
-            // 
-            this.LBL_NLMKM.AutoSize = true;
-            this.LBL_NLMKM.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_NLMKM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.LBL_NLMKM.Location = new System.Drawing.Point(166, 217);
-            this.LBL_NLMKM.Name = "LBL_NLMKM";
-            this.LBL_NLMKM.Size = new System.Drawing.Size(13, 17);
-            this.LBL_NLMKM.TabIndex = 46;
-            this.LBL_NLMKM.Text = "*";
-            this.LBL_NLMKM.Visible = false;
             // 
             // frm_DoiMatKhau
             // 

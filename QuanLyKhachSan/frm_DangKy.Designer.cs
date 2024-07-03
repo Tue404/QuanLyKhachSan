@@ -34,7 +34,6 @@
             this.txt_TaiKhoan = new System.Windows.Forms.TextBox();
             this.lbl_mk = new System.Windows.Forms.Label();
             this.lbl_TenTk = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbl_CCCD = new System.Windows.Forms.Label();
             this.txt_CCCD = new System.Windows.Forms.TextBox();
             this.CheckError = new System.Windows.Forms.ErrorProvider(this.components);
@@ -43,8 +42,9 @@
             this.lbl_KiemTraMK = new System.Windows.Forms.Label();
             this.btn_DangKy = new System.Windows.Forms.Button();
             this.btn_DangNhap = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.CheckError)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_MatKhau
@@ -53,6 +53,7 @@
             this.txt_MatKhau.Name = "txt_MatKhau";
             this.txt_MatKhau.Size = new System.Drawing.Size(180, 20);
             this.txt_MatKhau.TabIndex = 9;
+            this.txt_MatKhau.UseSystemPasswordChar = true;
             // 
             // txt_TaiKhoan
             // 
@@ -82,18 +83,6 @@
             this.lbl_TenTk.Size = new System.Drawing.Size(91, 19);
             this.lbl_TenTk.TabIndex = 7;
             this.lbl_TenTk.Text = "Tên tài khoản";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.ErrorImage = null;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(88, 42);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(279, 188);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
             // 
             // lbl_CCCD
             // 
@@ -180,11 +169,22 @@
             this.btn_DangNhap.UseVisualStyleBackColor = false;
             this.btn_DangNhap.Click += new System.EventHandler(this.btn_DangNhap_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(107, 37);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(260, 185);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            // 
             // frm_DangKy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(472, 608);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_DangNhap);
             this.Controls.Add(this.btn_DangKy);
             this.Controls.Add(this.lbl_KiemTraMK);
@@ -196,12 +196,11 @@
             this.Controls.Add(this.txt_TaiKhoan);
             this.Controls.Add(this.lbl_mk);
             this.Controls.Add(this.lbl_TenTk);
-            this.Controls.Add(this.pictureBox1);
             this.Name = "frm_DangKy";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Ký";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CheckError)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,7 +211,6 @@
         private System.Windows.Forms.TextBox txt_TaiKhoan;
         private System.Windows.Forms.Label lbl_mk;
         private System.Windows.Forms.Label lbl_TenTk;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lbl_CCCD;
         private System.Windows.Forms.TextBox txt_CCCD;
         private System.Windows.Forms.ErrorProvider CheckError;
@@ -221,5 +219,6 @@
         private System.Windows.Forms.Label lbl_KiemTraCCCD;
         private System.Windows.Forms.Button btn_DangKy;
         private System.Windows.Forms.Button btn_DangNhap;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

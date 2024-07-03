@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -150,7 +151,7 @@ namespace QuanLyKhachSan
 
                     // Lưu thông tin thanh toán vào CSDL
                     bll.LuuThongTinThanhToan(thanhToan);
-                    bllPhong.CapNhatTrangThaiPhong(maPhong, "Trống"); 
+                    bllPhong.CapNhatTrangThaiPhong(maPhong, "Trống");
 
                     // Xóa các dịch vụ đã đăng ký cho phòng
                     bll.XoaDichVuDaDangKyCuaPhong(maPhong);
@@ -159,8 +160,8 @@ namespace QuanLyKhachSan
                     bll.XoaThuePhong(maPhong);
 
                     MessageBox.Show("Thanh toán thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    string tk = "ViDu";
-                    frm_Main frm_TrangChu = new frm_Main(tk);
+
+                    frm_Main frm_TrangChu = new frm_Main("tk");
                     frm_Main.ViDu.OpenChildForm(new frm_GiaoDienPhong());
                 }
                 else
@@ -170,7 +171,7 @@ namespace QuanLyKhachSan
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("Đã xảy ra lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

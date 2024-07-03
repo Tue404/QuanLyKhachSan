@@ -118,10 +118,10 @@ namespace QuanLyKhachSan
                         string lydo = bll.LayLyDo(username);
                         MessageBox.Show("Đăng nhập thất bại. Lý do: " + lydo, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    //else
-                    //{
-                    //    MessageBox.Show("Tài khoản của bạn đang đợi xác thực. Xin vui lòng đợi admin xác thực", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    //}
+                    else
+                    {
+                        MessageBox.Show("Tài khoản của bạn đang đợi xác thực. Xin vui lòng đợi admin xác thực", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
 
                 }
             }

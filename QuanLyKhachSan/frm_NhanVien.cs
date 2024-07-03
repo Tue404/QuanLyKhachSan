@@ -69,9 +69,9 @@ namespace QuanLyKhachSan
 
         private void frm_NhanVien_Load(object sender, EventArgs e)
         {
-            bll.LoadDsNv(dgv_NhanVien);
-            bll.LoadDsNv(dgv2_NhanVien);
-            bll.LoadDsNv(dgv1_NhanVien);
+            bll.LoadDsNv(dgv_nhansu);
+            bll.LoadDsNv(dgv2_NhanSu);
+            bll.LoadDsNv(dgv1_NhanSu);
         }
 
         public bool batloi(string mans, string tennv, string diachi, string sdt, string chucvu, string gioitinh, string cccd)
@@ -79,7 +79,7 @@ namespace QuanLyKhachSan
             try
             {
                 if (string.IsNullOrEmpty(mans))
-                    throw new Exception("Chưa nhập mã nhân viên");
+                    throw new Exception("Chưa nhập mã nhân sự");
                 if (string.IsNullOrEmpty(tennv))
                     throw new Exception("Chưa nhập tên nhân viên");
                 if (string.IsNullOrEmpty(diachi))
@@ -119,34 +119,34 @@ namespace QuanLyKhachSan
                 {
                     gioitinh = null;
                 }
-                bool isValid = batloi(txt_MaNV.Text, txt_TenNV.Text, txt_DiaChi.Text, txt_SDT.Text, txt_ChucVu.Text, gioitinh, txt_CCCD.Text);
+                bool isValid = batloi(txt_manv_them.Text, txt_TenNhanVien.Text, txt_DiaChi.Text, txt_SoDienThoai.Text, txt_chucvu1.Text, gioitinh, txt_cccd.Text);
                 if (!isValid)
                     return;
-                bool khoaching = bll.KiemTraKhoa(txt_MaNV.Text);
+                bool khoaching = bll.KiemTraKhoa(txt_manv_them.Text);
                 if (!khoaching)
                     return;
-                bool leSdt = bll.dodaisdt(txt_SDT.Text);
+                bool leSdt = bll.dodaisdt(txt_SoDienThoai.Text);
                 if (!leSdt) return;
-                bool lecccd = bll.dodaiccd(txt_CCCD.Text);
+                bool lecccd = bll.dodaiccd(txt_cccd.Text);
                 if (!lecccd) return;
-                bool ktsdt = bll.KiemTraSDT(txt_SDT.Text);
+                bool ktsdt = bll.KiemTraSDT(txt_SoDienThoai.Text);
                 if (!ktsdt)
                     return;
-                bool ktcccd = bll.KiemTraCCCD(txt_CCCD.Text);
+                bool ktcccd = bll.KiemTraCCCD(txt_cccd.Text);
                 if (!ktcccd)
                     return;
-                bll.ThemNhanVien(txt_MaNV.Text, txt_TenNV.Text, gioitinh, txt_DiaChi.Text, txt_SDT.Text, dtp_NgaySinh.Value.Date, dtp_NgayVaoLam.Value.Date, txt_ChucVu.Text, txt_CCCD.Text);
+                bll.ThemNhanVien(txt_manv_them.Text, txt_TenNhanVien.Text, gioitinh, txt_DiaChi.Text, txt_SoDienThoai.Text, dtp_NgaySinh.Value.Date, dtp_NgayVaoLam.Value.Date, txt_chucvu1.Text, txt_cccd.Text);
 
-                bll.LoadDsNv(dgv_NhanVien);
-                bll.LoadDsNv(dgv1_NhanVien);
-                bll.LoadDsNv(dgv2_NhanVien);
+                bll.LoadDsNv(dgv_nhansu);
+                bll.LoadDsNv(dgv1_NhanSu);
+                bll.LoadDsNv(dgv2_NhanSu);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            MessageBox.Show("Đã thêm thông tin nhân viên " + txt_TenNV.Text, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Đã thêm thông tin nhân viên " + txt_TenNhanVien.Text, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btn_Sua_Click(object sender, EventArgs e)
@@ -178,9 +178,9 @@ namespace QuanLyKhachSan
             }
             MessageBox.Show("Đã sửa thông tin nhân viên " + txt_TenNVsua.Text, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             txt_MaNVsua.Enabled = true;
-            bll.LoadDsNv(dgv_NhanVien);
-            bll.LoadDsNv(dgv1_NhanVien);
-            bll.LoadDsNv(dgv2_NhanVien);
+            bll.LoadDsNv(dgv_nhansu);
+            bll.LoadDsNv(dgv1_NhanSu);
+            bll.LoadDsNv(dgv2_NhanSu);
         }
 
 
@@ -191,9 +191,9 @@ namespace QuanLyKhachSan
                 DialogResult result = MessageBox.Show("Bạn có muốn xóa nhân sự này không?", "Xoát", MessageBoxButtons.OKCancel);
                 if (result == DialogResult.OK)
                     bll.XoaNhanVien(txt_MaNVsua.Text);
-                bll.LoadDsNv(dgv_NhanVien);
-                bll.LoadDsNv(dgv2_NhanVien);
-                bll.LoadDsNv(dgv1_NhanVien);
+                bll.LoadDsNv(dgv_nhansu);
+                bll.LoadDsNv(dgv2_NhanSu);
+                bll.LoadDsNv(dgv1_NhanSu);
             }
             catch (Exception ex)
             {
@@ -210,7 +210,7 @@ namespace QuanLyKhachSan
 
         private void txt_TimTenNhanVien_TextChanged(object sender, EventArgs e)
         {
-            bll.TimNhanVienTheoTen(txt_TimTenNhanVien.Text, dgv1_NhanVien);
+            bll.TimNhanVienTheoTen(txt_TimTenNhanVien.Text, dgv1_NhanSu);
         }
 
         private void dgv2_NhanVien_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -218,16 +218,16 @@ namespace QuanLyKhachSan
             txt_MaNVsua.Enabled = false;
             try
             {
-                txt_MaNVsua.Text = dgv2_NhanVien.Rows[e.RowIndex].Cells[0].Value.ToString();
-                txt_TenNVsua.Text = dgv2_NhanVien.Rows[e.RowIndex].Cells[1].Value.ToString();
-                string gioitinh = dgv2_NhanVien.Rows[e.RowIndex].Cells[2].Value.ToString();
-                txt_ChucVusua.Text = dgv2_NhanVien.Rows[e.RowIndex].Cells[3].Value.ToString();
-                string ngaysinh2 = dgv2_NhanVien.Rows[e.RowIndex].Cells[4].Value.ToString();
-                string ngayvaolam2 = dgv2_NhanVien.Rows[e.RowIndex].Cells[5].Value.ToString();
+                txt_MaNVsua.Text = dgv2_NhanSu.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txt_TenNVsua.Text = dgv2_NhanSu.Rows[e.RowIndex].Cells[1].Value.ToString();
+                string gioitinh = dgv2_NhanSu.Rows[e.RowIndex].Cells[2].Value.ToString();
+                txt_ChucVusua.Text = dgv2_NhanSu.Rows[e.RowIndex].Cells[3].Value.ToString();
+                string ngaysinh2 = dgv2_NhanSu.Rows[e.RowIndex].Cells[4].Value.ToString();
+                string ngayvaolam2 = dgv2_NhanSu.Rows[e.RowIndex].Cells[5].Value.ToString();
                 dtp_NgaySinhsua.Value = DateTime.Parse(ngaysinh2);
                 dtp_NgayVaoLamsua.Value = DateTime.Parse(ngayvaolam2);
-                txt_DiaChisua.Text = dgv2_NhanVien.Rows[e.RowIndex].Cells[6].Value.ToString();
-                txt_SDTsua.Text = dgv2_NhanVien.Rows[e.RowIndex].Cells[7].Value.ToString();
+                txt_DiaChisua.Text = dgv2_NhanSu.Rows[e.RowIndex].Cells[6].Value.ToString();
+                txt_SDTsua.Text = dgv2_NhanSu.Rows[e.RowIndex].Cells[7].Value.ToString();
                 if (gioitinh == "Nam")
                 {
                     rdo_NamSua.Checked = true;
@@ -237,7 +237,7 @@ namespace QuanLyKhachSan
                     rdo_NuSua.Checked = true;
                 }
                 //bll.layanhNV(txt_manv_sua.Text, pic_anh);
-                txt_CCCDsua.Text = dgv2_NhanVien.Rows[e.RowIndex].Cells[7].Value.ToString();
+                txt_CCCDsua.Text = dgv2_NhanSu.Rows[e.RowIndex].Cells[7].Value.ToString();
             }
             catch (Exception ex)
             {
@@ -247,36 +247,36 @@ namespace QuanLyKhachSan
 
         private void tabPage_TimNhanVien_Click(object sender, EventArgs e)
         {
-            bll.TimNhanSuTheoChucVu(txt_TimChucVu.Text, dgv1_NhanVien);
+            bll.TimNhanSuTheoChucVu(txt_TimChucVu.Text, dgv1_NhanSu);
             if (txt_TimChucVu.Text == null)
             {
-                bll.LoadDsNv(dgv2_NhanVien);
+                bll.LoadDsNv(dgv2_NhanSu);
             }
         }
 
         private void rdo_TimNam_CheckedChanged(object sender, EventArgs e)
         {
-            bll.TimNhanVienTheoGioiTinh("Nam", dgv1_NhanVien);
+            bll.TimNhanVienTheoGioiTinh("Nam", dgv1_NhanSu);
         }
 
         private void rdo_TImNu_CheckedChanged(object sender, EventArgs e)
         {
-            bll.TimNhanVienTheoGioiTinh("Nữ", dgv1_NhanVien);
+            bll.TimNhanVienTheoGioiTinh("Nữ", dgv1_NhanSu);
         }
 
         private void txt_TimSDT_TextChanged(object sender, EventArgs e)
         {
-            bll.TimNhanVienTheosdt(txt_TimSDT.Text, dgv1_NhanVien);
+            bll.TimNhanVienTheosdt(txt_TimSDT.Text, dgv1_NhanSu);
             if (txt_TimSDT.Text == null)
             {
-                bll.LoadDsNv(dgv2_NhanVien);
+                bll.LoadDsNv(dgv2_NhanSu);
             }
         }
  
 
         private void btn_Load_Click(object sender, EventArgs e)
         {
-            bll.LoadDsNv(dgv1_NhanVien);
+            bll.LoadDsNv(dgv1_NhanSu);
         }
 
         private void txt_TimTenNhanVien_KeyPress(object sender, KeyPressEventArgs e)
@@ -298,11 +298,11 @@ namespace QuanLyKhachSan
 
             if (!string.IsNullOrEmpty(txt_TimChucVu.Text))
             {
-                bll.TimNhanSuTheoChucVu(txt_TimChucVu.Text, dgv2_NhanVien);
+                bll.TimNhanSuTheoChucVu(txt_TimChucVu.Text, dgv2_NhanSu);
             }
             else
             {
-                bll.LoadDsNv(dgv2_NhanVien); // Tải lại danh sách nếu text box trống
+                bll.LoadDsNv(dgv2_NhanSu); // Tải lại danh sách nếu text box trống
             }
         }
 
@@ -364,11 +364,8 @@ namespace QuanLyKhachSan
         private void txt_TenNV_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (char.IsDigit(e.KeyChar))
-            {
+            
                 e.Handled = true;
-            }
         }
-
-   
     }
 }
